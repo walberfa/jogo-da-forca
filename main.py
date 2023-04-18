@@ -2,13 +2,20 @@ import random
 
 
 def escolher_palavra():
+    """Banco de palavras.
 
+    Return:
+        Palavra escolhida para o jogo.
+    """
     palavras = ["abacaxi", "banana", "laranja", "limao", "manga"]
     return random.choice(palavras)
 
 
 def jogar_forca():
-
+    """
+    Execução do jogo.
+    Captura as tentativas do jogador e mostra o resultado.
+    """
     palavra = escolher_palavra()
     letras_digitadas = set()
     tentativas_restantes = 6
@@ -36,7 +43,7 @@ def jogar_forca():
 
 
 def desenhar_boneco(tentativas_restantes):
-
+    """Desenho dos bonecos a cada tentativa."""
     if tentativas_restantes == 5:
         print(""" ________
  |      |
