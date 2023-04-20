@@ -1,14 +1,5 @@
-import random
-
-
-def escolher_palavra():
-    """Banco de palavras.
-
-    Return:
-        Palavra escolhida para o jogo.
-    """
-    palavras = ["abacaxi", "banana", "laranja", "limao", "manga"]
-    return random.choice(palavras)
+from banco_palavras import escolher_palavra
+from desenhar_boneco import desenhar_boneco
 
 
 def jogar_forca():
@@ -29,7 +20,7 @@ def jogar_forca():
         else:
             letras_digitadas.add(letra)
             if letra in palavra:
-                print("Acertou!")
+                print("Acertou! Palavra:", palavra)
                 if all(letra in letras_digitadas for letra in palavra):
                     print("Parabéns, você ganhou!")
                     break
@@ -40,58 +31,6 @@ def jogar_forca():
                 if tentativas_restantes == 0:
                     print("Game over! A palavra era", palavra)
                     break
-
-
-def desenhar_boneco(tentativas_restantes):
-    """Desenho dos bonecos a cada tentativa."""
-    if tentativas_restantes == 5:
-        print(""" ________
- |      |
- |      O
- |   
- |   
-_|_
-            """)
-    elif tentativas_restantes == 4:
-        print(""" ________
- |      |
- |      O
- |      |
- |    
-_|_
-            """)
-    elif tentativas_restantes == 3:
-        print(""" ________
- |      |
- |      O
- |     /|
- |     
-_|_
-            """)
-    elif tentativas_restantes == 2:
-        print(""" ________
- |      |
- |      O
- |     /|\\
- |     
-_|_
-                """)
-    elif tentativas_restantes == 1:
-        print(""" ________
- |      |
- |      O
- |     /|\\
- |     /
-_|_
-                """)
-    elif tentativas_restantes == 0:
-        print(""" ________
- |      |
- |      O
- |     /|\\
- |     / \\
-_|_
-                """)
 
 
 jogar_forca()
