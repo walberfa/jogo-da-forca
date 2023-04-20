@@ -17,20 +17,22 @@ def jogar_forca():
 
         if letra in letras_digitadas:
             print("Você já digitou essa letra. Tente novamente.")
+            continue
+
+        letras_digitadas.add(letra)
+
+        if letra in palavra:
+            print("Acertou!")
+            if all(letra in letras_digitadas for letra in palavra):
+                print("Palavra:", palavra, "\nParabéns, você ganhou!")
+                break
         else:
-            letras_digitadas.add(letra)
-            if letra in palavra:
-                print("Acertou! Palavra:", palavra)
-                if all(letra in letras_digitadas for letra in palavra):
-                    print("Parabéns, você ganhou!")
-                    break
-            else:
-                tentativas_restantes -= 1
-                print("Errou! Você tem", tentativas_restantes, "tentativas restantes.")
-                desenhar_boneco(tentativas_restantes)
-                if tentativas_restantes == 0:
-                    print("Game over! A palavra era", palavra)
-                    break
+            tentativas_restantes -= 1
+            print("Errou! Você tem", tentativas_restantes, "tentativas restantes.")
+            desenhar_boneco(tentativas_restantes)
+            if tentativas_restantes == 0:
+                print("Game over! A palavra era", palavra)
+                break
 
 
 jogar_forca()
