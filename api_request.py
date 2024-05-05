@@ -1,3 +1,4 @@
+# API requests a random word.
 import requests
 
 
@@ -15,5 +16,4 @@ def api_request():
         word = data[0]
         return word
 
-    else:
-        return f"Erro na solicitação: {response.status_code}"
+    return f"Erro na solicitação: {response.status_code}"

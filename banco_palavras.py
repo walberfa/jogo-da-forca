@@ -1,3 +1,4 @@
+# Banco de palavras. Lista gerada pelo ChatGPT.
 import random
 
 
