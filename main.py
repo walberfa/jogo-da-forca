@@ -1,4 +1,5 @@
-# from api_request import api_request
+"""Jogo da forca."""
+
 from banco_palavras import escolher_palavra
 from desenhar_boneco import desenhar_boneco
 

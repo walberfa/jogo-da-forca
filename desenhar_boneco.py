@@ -1,11 +1,13 @@
+"""Desenho dos bonecos a cada tentativa."""
+
+
 def desenhar_boneco(tentativas_restantes):
-    """Desenho dos bonecos a cada tentativa."""
     if tentativas_restantes == 5:
         print(""" ________
  |      |
  |      O
- |   
- |   
+ |
+ |
 _|_
             """)
     elif tentativas_restantes == 4:
@@ -13,7 +15,7 @@ _|_
  |      |
  |      O
  |      |
- |    
+ |
 _|_
             """)
     elif tentativas_restantes == 3:
@@ -21,7 +23,7 @@ _|_
  |      |
  |      O
  |     /|
- |     
+ |
 _|_
             """)
     elif tentativas_restantes == 2:
@@ -29,7 +31,7 @@ _|_
  |      |
  |      O
  |     /|\\
- |     
+ |
 _|_
                 """)
     elif tentativas_restantes == 1:

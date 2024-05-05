@@ -1,10 +1,9 @@
-# Banco de palavras. Lista gerada pelo ChatGPT.
+"""Banco de palavras. Lista gerada pelo ChatGPT."""
 import random
 
 
 def escolher_palavra():
     """Banco de palavras.
-    Lista gerada pelo ChatGPT.
 
     Return:
         Palavra escolhida para o jogo.
