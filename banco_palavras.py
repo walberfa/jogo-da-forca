@@ -8,12 +8,13 @@ def escolher_palavra():
     Return:
         Palavra escolhida para o jogo.
     """
-    palavras = ['abacate', 'abajur', 'abelha', 'abobora', 'abridor', 'abutre', 'alicante', 'amendoim',
-                'armadura', 'arvore', 'avestruz', 'babuino', 'banana', 'bandeira', 'banheiro',
-                'bateria', 'beijo', 'bicicleta', 'biquini', 'biscoito', 'bode', 'boia', 'bolacha',
-                'bolha', 'boneca', 'borboleta', 'boteco', 'botequim', 'bruxa', 'cachorro',
-                'cadeira', 'cafe', 'camaleao', 'camisa', 'campanha', 'caneca', 'canhao', 'canivete', 'capivara',
-                'carro', 'cebola', 'celular', 'cereja', 'chapeu', 'chinelo', 'chocolate', 'cobra',
-                'colher', 'dado', 'escola']
+    palavras1 = ['abacate', 'abajur', 'abelha', 'abobora', 'abridor', 'abutre', 'alicante', 'amendoim',
+                 'armadura', 'arvore', 'avestruz', 'babuino', 'banana', 'bandeira', 'banheiro',
+                 'bateria', 'beijo', 'bicicleta', 'biquini', 'biscoito', 'bode', 'boia', 'bolacha',
+                 'bolha', 'boneca', 'borboleta', 'boteco', 'botequim', 'bruxa', 'cachorro']
 
-    return random.choice(palavras)
+    palavras2 = ['cadeira', 'cafe', 'camaleao', 'camisa', 'campanha', 'caneca', 'canhao', 'canivete', 'capivara',
+                 'carro', 'cebola', 'celular', 'cereja', 'chapeu', 'chinelo', 'chocolate', 'cobra',
+                 'colher', 'dado', 'escola']
+
+    return random.choice(palavras1 or palavras2)

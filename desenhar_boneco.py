@@ -2,6 +2,7 @@
 
 
 def desenhar_boneco(tentativas_restantes):
+    """Criação do boneco."""
     if tentativas_restantes == 5:
         print(""" ________
  |      |
